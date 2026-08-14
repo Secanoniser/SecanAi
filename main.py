@@ -1,22 +1,23 @@
 import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from settings import get_settings
 
 def run_local_llm():
-    model_dir = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\output_model"
+    model_dir = get_settings().model_path
     
     if not os.path.exists(model_dir):
         print(f"[!] Model directory {model_dir} not found. Please run train.py first.")
         return
 
     print(f"[*] Loading locally trained model with anti-repetition parameters from: {model_dir}...")
-    tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
     
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"[*] Using device: {device}")
     
     model = AutoModelForCausalLM.from_pretrained(
-        model_dir,
+        str(model_dir),
         torch_dtype=torch.float16 if device == "cuda" else torch.float32,
         device_map="auto"
     )

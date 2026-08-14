@@ -1,16 +1,17 @@
 import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from settings import get_settings
 
 def test_model_direct():
-    model_dir = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\output_model"
+    model_dir = get_settings().model_path
     if not os.path.exists(model_dir):
         print(f"[!] Model directory {model_dir} not found.")
         return
 
     print(f"[*] Loading fine-tuned math model directly from {model_dir}...")
-    tokenizer = AutoTokenizer.from_pretrained(model_dir)
-    model = AutoModelForCausalLM.from_pretrained(model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
+    model = AutoModelForCausalLM.from_pretrained(str(model_dir))
     model.eval()
 
     if tokenizer.pad_token is None:

@@ -3,6 +3,7 @@ from tokenizers import Tokenizer
 from tokenizers.models import BPE
 from tokenizers.trainers import BpeTrainer
 from tokenizers.pre_tokenizers import ByteLevel
+from settings import get_settings
 
 def train_custom_tokenizer(corpus_path: str, save_dir: str):
     print("[*] Initializing Byte-Level BPE Tokenizer...")
@@ -29,6 +30,5 @@ def train_custom_tokenizer(corpus_path: str, save_dir: str):
     print(f"[+] Tokenizer saved successfully to {save_dir}/tokenizer.json")
 
 if __name__ == "__main__":
-    corpus = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\corpus.txt"
-    out_dir = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\tokenizer"
-    train_custom_tokenizer(corpus, out_dir)
+    settings = get_settings()
+    train_custom_tokenizer(str(settings.raw_data_dir / "corpus.txt"), str(settings.artifacts_dir / "tokenizer"))

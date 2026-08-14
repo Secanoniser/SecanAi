@@ -1,5 +1,6 @@
 import os
 import requests
+from settings import get_settings
 
 def scrape_wikipedia_articles():
     print("[*] Starting Automated Web Scraping for Training Corpus...")
@@ -37,10 +38,10 @@ def scrape_wikipedia_articles():
             print(f"[!] Error scraping '{topic}': {e}")
             
     if scraped_text:
-        corpus_path = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\corpus.txt"
+        corpus_path = get_settings().raw_data_dir / "corpus.txt"
         combined_text = "\n\n".join(scraped_text)
         
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
+        os.makedirs(corpus_path.parent, exist_ok=True)
         with open(corpus_path, "w", encoding="utf-8") as f:
             f.write(combined_text)
             

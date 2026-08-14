@@ -10,3 +10,10 @@ ENV/
 output_model/
 tokenizer/
 corpus.txt
+
+# Local configuration and generated datasets/runs
+.env
+data/processed/
+artifacts/
+.pytest_cache/
+.ruff_cache/
