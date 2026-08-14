@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+
+# Model weights & checkpoints (too large for git)
+output_model/
+tokenizer/
+corpus.txt
