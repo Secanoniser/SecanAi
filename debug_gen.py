@@ -1,9 +1,10 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from settings import get_settings
 
-model_dir = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\output_model"
-tokenizer = AutoTokenizer.from_pretrained(model_dir)
-model = AutoModelForCausalLM.from_pretrained(model_dir)
+model_dir = get_settings().model_path
+tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
+model = AutoModelForCausalLM.from_pretrained(str(model_dir))
 model.eval()
 
 if tokenizer.pad_token is None:

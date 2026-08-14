@@ -8,14 +8,15 @@ from transformers import (
     PreTrainedTokenizerFast
 )
 from dataset import CausalTextDataset
+from settings import get_settings
 
 def main():
     print("[*] Starting Scaled (~100M Parameter) Local LLM Pre-training Pipeline...")
     
-    base_dir = "C:\\Users\\Nyxentra\\Desktop\\local_llm"
-    corpus_path = os.path.join(base_dir, "corpus.txt")
-    tokenizer_path = os.path.join(base_dir, "tokenizer", "tokenizer.json")
-    output_dir = os.path.join(base_dir, "output_model")
+    settings = get_settings()
+    corpus_path = settings.raw_data_dir / "corpus.txt"
+    tokenizer_path = settings.artifacts_dir / "tokenizer" / "tokenizer.json"
+    output_dir = settings.artifacts_dir / "models" / "pretraining"
 
     if not os.path.exists(tokenizer_path):
         print("[!] Tokenizer not found. Please run train_tokenizer.py first.")
@@ -29,7 +30,7 @@ def main():
         unk_token="<unk>"
     )
 
-    dataset = CausalTextDataset(corpus_path, tokenizer, block_size=128)
+    dataset = CausalTextDataset(str(corpus_path), tokenizer, block_size=128)
 
     # Scaled Model Configuration (~80-100M parameters)
     config = LlamaConfig(
@@ -47,7 +48,7 @@ def main():
     print(f"[+] Initialized Scaled Llama model from scratch with {model.num_parameters():,} parameters.")
 
     training_args = TrainingArguments(
-        output_dir=output_dir,
+        output_dir=str(output_dir),
         per_device_train_batch_size=2,
         num_train_epochs=5,
         save_steps=20,
@@ -69,8 +70,8 @@ def main():
     trainer.train()
 
     print(f"[+] Pre-training complete! Saving model to {output_dir}")
-    trainer.save_model(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    trainer.save_model(str(output_dir))
+    tokenizer.save_pretrained(str(output_dir))
 
 if __name__ == "__main__":
     main()

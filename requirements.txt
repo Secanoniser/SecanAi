@@ -1,5 +1,11 @@
-torch>=2.0.0
-transformers>=4.38.0
-accelerate>=0.27.0
-bitsandbytes>=0.41.0
-sentencepiece>=0.1.99
+# Tested Python dependency ranges. Install the PyTorch wheel appropriate for your CPU/CUDA setup first.
+torch>=2.2,<2.8
+transformers>=4.45,<4.53
+accelerate>=0.30,<1.8
+datasets>=2.19,<4.0
+tokenizers>=0.20,<0.22
+sentencepiece>=0.2,<0.3
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+requests>=2.32,<3.0

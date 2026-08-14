@@ -1,7 +1,8 @@
 import os
+from settings import get_settings
 
 def generate_math_science_corpus():
-    corpus_path = "C:\\Users\\Nyxentra\\Desktop\\local_llm\\corpus.txt"
+    corpus_path = get_settings().raw_data_dir / "corpus.txt"
     print(f"[*] Generating math, logic, and science corpus at {corpus_path}...")
     
     sections = [
@@ -17,7 +18,7 @@ def generate_math_science_corpus():
     
     corpus_text = "\n\n".join(sections * 15)
 
-    os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
+    os.makedirs(corpus_path.parent, exist_ok=True)
     with open(corpus_path, "w", encoding="utf-8") as f:
         f.write(corpus_text)
         
