@@ -2,6 +2,12 @@
 
 A lightweight, production-ready Python project for running local Large Language Models (LLMs) on your machine using Hugging Face Transformers.
 
+## Project plans
+
+- [Feature roadmap](FEATURE_ROADMAP.md) - serving and product integration priorities.
+- [Training improvement plan](IMPROVEMENT_PLAN.md) - data collection and model scaling.
+- [Generation-quality action plan](EXPERT_ACTION_PLAN.md) - fixes for local checkpoint output.
+
 ## Prerequisites
 - Python 3.10+
 - PyTorch (with CUDA support if running on an NVIDIA GPU)

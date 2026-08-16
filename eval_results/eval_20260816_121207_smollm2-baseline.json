@@ -1,0 +1,68 @@
+{
+  "source": "smollm2-baseline",
+  "timestamp": "2026-08-16T12:12:07.057389+00:00",
+  "suite_size": 5,
+  "quick": true,
+  "parameter_count": 134515008,
+  "elapsed_seconds": 10.3,
+  "summary": {
+    "hits": 5,
+    "refused": 0,
+    "total": 5,
+    "hit_rate": 1.0,
+    "by_category": {
+      "python": {
+        "hits": 5,
+        "refused": 0,
+        "total": 5
+      }
+    }
+  },
+  "results": [
+    {
+      "category": "python",
+      "prompt": "What is a Python list comprehension?",
+      "keyword": "list",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 219,
+      "response": "Python list comprehensions are a powerful feature of the language that allows you to create lists from existing iterables in a concise way. They consist of brackets containing an expression followed by a for loop, which"
+    },
+    {
+      "category": "python",
+      "prompt": "Write a Python function that adds two numbers.",
+      "keyword": "def",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 128,
+      "response": "```python\ndef add_numbers(a: int, b: int) -> int:\n    \"\"\"Add two numbers.\"\"\"\n    return a + b\n```\n\nThis function uses the built-"
+    },
+    {
+      "category": "python",
+      "prompt": "What is a Python dictionary and how do you use it?",
+      "keyword": "key",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 200,
+      "response": "Python dictionaries (also known as associative arrays) are mutable data structures that store key-value pairs. They allow for efficient lookups, insertions, and deletions of elements without modifying"
+    },
+    {
+      "category": "python",
+      "prompt": "How do you open and read a file in Python?",
+      "keyword": "open",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 136,
+      "response": "Python's built-in `open()` function opens a file for reading. Here's how to use it:\n\n```python\nfile_name = 'example.txt'  # replace with"
+    },
+    {
+      "category": "python",
+      "prompt": "What does the 'if __name__ == \"__main__\"' line do?",
+      "keyword": "main",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 155,
+      "response": "The `if __file__ in __main__.` line checks if the script file name (`__file__`) matches the one specified by the `__name__` variable. This ensures that the"
+    }
+  ]
+}

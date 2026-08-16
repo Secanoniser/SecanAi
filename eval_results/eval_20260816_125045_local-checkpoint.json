@@ -1,0 +1,349 @@
+{
+  "source": "local-checkpoint",
+  "timestamp": "2026-08-16T12:50:45.837215+00:00",
+  "suite_size": 34,
+  "quick": false,
+  "parameter_count": 116411136,
+  "elapsed_seconds": 52.3,
+  "summary": {
+    "hits": 0,
+    "refused": 0,
+    "total": 34,
+    "hit_rate": 0.0,
+    "by_category": {
+      "ai": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      },
+      "general": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      },
+      "math": {
+        "hits": 0,
+        "refused": 0,
+        "total": 8
+      },
+      "python": {
+        "hits": 0,
+        "refused": 0,
+        "total": 8
+      },
+      "science": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      }
+    }
+  },
+  "results": [
+    {
+      "category": "python",
+      "prompt": "What is a Python list comprehension?",
+      "keyword": "list",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "python",
+      "prompt": "Write a Python function that adds two numbers.",
+      "keyword": "def",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 182,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-dimensional the Fouriers."
+    },
+    {
+      "category": "python",
+      "prompt": "What is a Python dictionary and how do you use it?",
+      "keyword": "key",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 182,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-dimensional the Fouriers."
+    },
+    {
+      "category": "python",
+      "prompt": "How do you open and read a file in Python?",
+      "keyword": "open",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 177,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-based-level be be be"
+    },
+    {
+      "category": "python",
+      "prompt": "What does the 'if __name__ == \"__main__\"' line do?",
+      "keyword": "main",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 175,
+      "response": "==== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and an be be be the Fouriers."
+    },
+    {
+      "category": "python",
+      "prompt": "Explain what a for loop does in Python.",
+      "keyword": "loop",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 182,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-dimensional the Fouriers."
+    },
+    {
+      "category": "python",
+      "prompt": "What is a function argument in Python?",
+      "keyword": "argument",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 154,
+      "response": "==== Article ===\n\nThe ==\nThe Fourier transform ===\n  \n    \n      \n        f\n       The Fourier\n        (\n        x\n        )\n        ,\n        =\n        +"
+    },
+    {
+      "category": "python",
+      "prompt": "How do you install a package with pip?",
+      "keyword": "pip",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 179,
+      "response": "===== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and an Fourier transform."
+    },
+    {
+      "category": "math",
+      "prompt": "Solve 2x + 3 = 7 for x.",
+      "keyword": "x",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 178,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers.\nThe set"
+    },
+    {
+      "category": "math",
+      "prompt": "What is 12 times 8?",
+      "keyword": "96",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "math",
+      "prompt": "What is the square root of 144?",
+      "keyword": "12",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 191,
+      "response": "==== Article ===\n\nThe Fourier transform ===\nThe ratio ===\nIn the golden ratio of the Fourier transform of the golden be be be the Fourier. The Fourier transform, and the Fourier, and a prime,"
+    },
+    {
+      "category": "math",
+      "prompt": "If a triangle has angles 60 and 90 degrees, what is the third angle?",
+      "keyword": "30",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 183,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the prime, and an Fourier transform."
+    },
+    {
+      "category": "math",
+      "prompt": "What is 25 percent of 80?",
+      "keyword": "20",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 154,
+      "response": "==== Article ===\n\nThe ==\nThe Fourier transform ===\n  \n    \n      \n        f\n       The Fourier\n        (\n        x\n        )\n        ,\n        =\n        +"
+    },
+    {
+      "category": "math",
+      "prompt": "What is the area of a rectangle 4 by 6?",
+      "keyword": "24",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 169,
+      "response": "==== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "math",
+      "prompt": "Simplify the fraction 8/12.",
+      "keyword": "2/3",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 179,
+      "response": "===== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and an Fourier transform."
+    },
+    {
+      "category": "math",
+      "prompt": "What comes next: 2, 4, 6, 8, ...?",
+      "keyword": "10",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "science",
+      "prompt": "What is the chemical symbol for water?",
+      "keyword": "H2O",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 170,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "science",
+      "prompt": "What planet is closest to the Sun?",
+      "keyword": "Mercury",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 131,
+      "response": "===== Article ===\n\nThe ==\n\n  \n    \n      \n        (\n        x\n        )\n        ,\n        =\n        +\n        1\n        ξ\n        −"
+    },
+    {
+      "category": "science",
+      "prompt": "What force pulls objects toward the Earth?",
+      "keyword": "gravity",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 172,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fourier (e."
+    },
+    {
+      "category": "science",
+      "prompt": "What gas do plants absorb from the air?",
+      "keyword": "carbon",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 182,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-dimensional the Fouriers."
+    },
+    {
+      "category": "science",
+      "prompt": "What is the boiling point of water in Celsius?",
+      "keyword": "100",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 194,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-dimensional the Fourier., the Fourier"
+    },
+    {
+      "category": "science",
+      "prompt": "What is photosynthesis?",
+      "keyword": "light",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a transformer in machine learning?",
+      "keyword": "attention",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a neural network?",
+      "keyword": "neuron",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What is supervised learning?",
+      "keyword": "label",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a token in a language model?",
+      "keyword": "token",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a large language model?",
+      "keyword": "language",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "ai",
+      "prompt": "What does fine-tuning a model mean?",
+      "keyword": "train",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "general",
+      "prompt": "What is the capital of France?",
+      "keyword": "Paris",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 178,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers.\nThe set"
+    },
+    {
+      "category": "general",
+      "prompt": "How many days are in a leap year?",
+      "keyword": "366",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 179,
+      "response": "===== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and an Fourier transform."
+    },
+    {
+      "category": "general",
+      "prompt": "What is the largest ocean on Earth?",
+      "keyword": "Pacific",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 178,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers.\nThe set"
+    },
+    {
+      "category": "general",
+      "prompt": "What language is spoken in Japan?",
+      "keyword": "Japanese",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 176,
+      "response": "==== Article ===\n\nThe ==\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers."
+    },
+    {
+      "category": "general",
+      "prompt": "What is the currency of the United States?",
+      "keyword": "dollar",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 178,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a prime, and which the Fouriers.\nThe set"
+    },
+    {
+      "category": "general",
+      "prompt": "Who wrote the play Romeo and Juliet?",
+      "keyword": "Shakespeare",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 179,
+      "response": "===== Article ===\n\nThe ratio ===\nIn the Fourier transform of the golden ratio of the Fourier. The Fourier transform, and the Fourier, and a set of the first-level be be be used to"
+    }
+  ]
+}

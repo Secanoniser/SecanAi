@@ -1,5 +1,4 @@
 import requests
-import json
 
 def test_local_api():
     url = "http://127.0.0.1:8000/api/chat"
@@ -13,11 +12,14 @@ def test_local_api():
     
     for prompt in prompts:
         try:
-            response = requests.post(url, json={"prompt": prompt}, timeout=30)
+            # stream=false returns a clean JSON response for CLI testing;
+            # the web UI uses the streaming contract instead.
+            response = requests.post(url, json={"prompt": prompt, "stream": False}, timeout=60)
             if response.status_code == 200:
                 data = response.json()
                 print(f"\nPrompt: '{prompt}'")
                 print(f"AI Response: '{data.get('response')}'")
+                print(f"Model source: {data.get('model_source')} | Retrieval: {data.get('retrieval_mode')}")
                 print("-" * 50)
             else:
                 print(f"[!] Server error for '{prompt}': Status {response.status_code} - {response.text}")

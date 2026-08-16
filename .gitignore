@@ -10,3 +10,7 @@ ENV/
 output_model/
 tokenizer/
 corpus.txt
+
+# Runtime logs & eval artifacts
+logs/
+

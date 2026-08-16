@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architect - Local LLM AI Chat</title>
+    <title>SecanAi - Local LLM AI Chat</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,16 +24,16 @@
             <div class="group flex items-center justify-between p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 cursor-pointer text-sm text-slate-200 transition border border-slate-700/50">
                 <div class="flex items-center gap-3 truncate">
                     <i class="fa-solid fa-message text-indigo-400"></i>
-                    <span class="truncate">Local LLM Training & Math</span>
+                    <span class="truncate">Conversation in memory</span>
                 </div>
             </div>
         </div>
         <!-- Sidebar Footer -->
         <div class="p-4 border-t border-slate-800 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-white shadow-md">AR</div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-white shadow-md">SA</div>
             <div class="truncate">
-                <div class="text-sm font-semibold text-slate-200">Architect AI</div>
-                <div class="text-xs text-emerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Local Model Active</div>
+                <div class="text-sm font-semibold text-slate-200">SecanAi</div>
+                <div id="sidebar-model-status" class="text-xs text-emerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Loading model...</div>
             </div>
         </div>
     </aside>
@@ -47,13 +47,16 @@
                     <i class="fa-solid fa-brain"></i>
                 </div>
                 <div>
-                    <h1 class="text-sm font-bold text-slate-100">Local LLM Architect</h1>
-                    <p class="text-xs text-slate-400">SmolLM / Llama (24.1M Parameters + SFT)</p>
+                    <h1 class="text-sm font-bold text-slate-100">SecanAi Local LLM</h1>
+                    <p id="header-model-name" class="text-xs text-slate-400">Loading model...</p>
                 </div>
             </div>
             <div class="flex items-center gap-3">
+                <span id="rag-status" class="px-3 py-1 rounded-full bg-slate-700/40 border border-slate-600/40 text-slate-300 text-xs font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-book"></i> RAG: checking...
+                </span>
                 <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium flex items-center gap-1.5">
-                    <i class="fa-solid fa-bolt"></i> Local CPU / GPU
+                    <i class="fa-solid fa-bolt"></i> Streaming
                 </span>
             </div>
         </header>
@@ -66,8 +69,8 @@
                     <i class="fa-solid fa-robot"></i>
                 </div>
                 <div class="flex-1 bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-sm text-slate-200 text-sm leading-relaxed">
-                    <p class="font-semibold text-indigo-400 mb-1">Architect AI Assistant</p>
-                    <p>Hello! I am your locally trained AI model. Ask me anything about Python, mathematics, transformers, or architecture, and I will generate a response using our local weights!</p>
+                    <p class="font-semibold text-indigo-400 mb-1">SecanAi Assistant</p>
+                    <p>Hello! I am your locally run AI model. Ask me anything about Python, mathematics, science, or AI — my replies stream in token by token, and I remember this conversation as we go.</p>
                 </div>
             </div>
         </div>
@@ -89,24 +92,42 @@
         <!-- Input Bar -->
         <div class="p-6 bg-slate-950 border-t border-slate-800/60">
             <div class="max-w-3xl mx-auto">
+                <!-- Generation params: temperature + max tokens as per-request fields -->
+                <div class="flex items-center gap-4 mb-3 text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <label for="temperature" class="whitespace-nowrap">Temperature <span id="temperature-value" class="text-indigo-400 font-semibold">0.7</span></label>
+                        <input id="temperature" type="range" min="0" max="1" step="0.05" value="0.7"
+                               class="w-32 accent-indigo-500" oninput="document.getElementById('temperature-value').textContent = this.value">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label for="max-tokens" class="whitespace-nowrap">Max tokens</label>
+                        <select id="max-tokens" class="bg-slate-900 border border-slate-700 rounded-lg px-2 py-1 text-slate-200 outline-none">
+                            <option value="64">64</option>
+                            <option value="128" selected>128</option>
+                            <option value="256">256</option>
+                            <option value="512">512</option>
+                        </select>
+                    </div>
+                </div>
                 <form id="chat-form" onsubmit="handleSendMessage(event)" class="relative flex items-center">
-                    <input 
-                        type="text" 
-                        id="user-input" 
-                        placeholder="Ask your local LLM anything..." 
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Ask SecanAi anything..."
                         class="w-full bg-slate-900 border border-slate-700/60 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-100 placeholder-slate-500 rounded-2xl py-4 pl-4 pr-14 text-sm outline-none transition shadow-inner"
                         autocomplete="off"
                         required
                     >
-                    <button 
-                        type="submit" 
+                    <button
+                        type="submit"
+                        id="send-button"
                         class="absolute right-3 w-10 h-10 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl flex items-center justify-center transition shadow-md shadow-indigo-600/20"
                     >
                         <i class="fa-solid fa-paper-plane text-xs"></i>
                     </button>
                 </form>
                 <div class="text-center mt-3 text-xs text-slate-500">
-                    Powered by your custom PyTorch Transformer model running locally via FastAPI.
+                    Powered by your custom Transformer model running locally via FastAPI.
                 </div>
             </div>
         </div>
@@ -117,16 +138,46 @@
         const chatContainer = document.getElementById('chat-container');
         const userInput = document.getElementById('user-input');
         const typingIndicator = document.getElementById('typing-indicator');
+        const sendButton = document.getElementById('send-button');
+
+        // Layer 3 (memory): the running list of earlier turns for this chat.
+        let conversationHistory = [];
+        let generating = false;
+
+        // Load model identity from the server so the UI never lies about
+        // which checkpoint is active (Layer 1).
+        async function loadModelInfo() {
+            try {
+                const response = await fetch('/api/model');
+                if (!response.ok) return;
+                const info = await response.json();
+                const name = info.display_name + ' (' + (info.parameter_count_human || '?') + ' params)';
+                document.getElementById('header-model-name').textContent = name;
+                document.getElementById('sidebar-model-status').innerHTML =
+                    '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> ' + info.display_name;
+                const rag = info.rag || {};
+                const ragBadge = document.getElementById('rag-status');
+                if (rag.enabled) {
+                    const mode = rag.semantic_index_ready ? 'semantic' : 'lexical';
+                    ragBadge.innerHTML = '<i class="fa-solid fa-book"></i> RAG: ' + mode + ' (' + rag.chunk_count + ' chunks)';
+                } else {
+                    ragBadge.innerHTML = '<i class="fa-solid fa-book"></i> RAG: off';
+                }
+            } catch (e) {
+                document.getElementById('header-model-name').textContent = 'Server unreachable';
+            }
+        }
 
         function newChat() {
+            conversationHistory = [];
             chatContainer.innerHTML = `
                 <div class="flex items-start gap-4 max-w-3xl mx-auto">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shrink-0 shadow-lg">
                         <i class="fa-solid fa-robot"></i>
                     </div>
                     <div class="flex-1 bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-sm text-slate-200 text-sm leading-relaxed">
-                        <p class="font-semibold text-indigo-400 mb-1">Architect AI Assistant</p>
-                        <p>New session started! What would you like to explore today?</p>
+                        <p class="font-semibold text-indigo-400 mb-1">SecanAi Assistant</p>
+                        <p>New session started — conversation memory cleared. What would you like to explore?</p>
                     </div>
                 </div>
             `;
@@ -135,7 +186,7 @@
         async function handleSendMessage(event) {
             event.preventDefault();
             const prompt = userInput.value.trim();
-            if (!prompt) return;
+            if (!prompt || generating) return;
 
             // Append User Message
             appendMessage('user', prompt);
@@ -144,34 +195,69 @@
 
             // Show typing indicator
             typingIndicator.classList.remove('hidden');
+            generating = true;
+            sendButton.disabled = true;
+
+            // Layer 6 (params): temperature/top_p/max_tokens as per-request fields.
+            const payload = {
+                messages: conversationHistory.concat([{ role: 'user', content: prompt }]),
+                stream: true,
+                use_rag: true,
+                temperature: parseFloat(document.getElementById('temperature').value),
+                max_tokens: parseInt(document.getElementById('max-tokens').value, 10),
+            };
+
+            const assistantTextElement = appendMessage('assistant', '', true);
 
             try {
                 const response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: prompt })
+                    body: JSON.stringify(payload)
                 });
 
-                const data = await response.json();
-                typingIndicator.classList.add('hidden');
-
-                if (response.ok) {
-                    appendMessage('assistant', data.response);
-                } else {
-                    appendMessage('assistant', 'Error: ' + (data.detail || 'Failed to generate response.'));
+                if (!response.ok) {
+                    let detail = 'Failed to generate response.';
+                    try {
+                        const errorData = await response.json();
+                        detail = errorData.detail || detail;
+                    } catch (e) { /* non-JSON error body */ }
+                    assistantTextElement.textContent = 'Error: ' + detail;
+                    typingIndicator.classList.add('hidden');
+                    return;
                 }
-            } catch (error) {
-                typingIndicator.classList.add('hidden');
-                appendMessage('assistant', 'Network Error: Could not connect to local server.');
-            }
 
-            chatContainer.scrollTop = chatContainer.scrollHeight;
+                // Layer 6 (streaming): consume the plain-text token stream.
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let fullResponse = '';
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    fullResponse += decoder.decode(value, { stream: true });
+                    assistantTextElement.textContent = fullResponse;
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+                fullResponse += decoder.decode();
+
+                // Memory: the assistant turn is now part of the running list.
+                conversationHistory.push({ role: 'user', content: prompt });
+                conversationHistory.push({ role: 'assistant', content: fullResponse });
+            } catch (error) {
+                assistantTextElement.textContent = 'Network Error: Could not connect to local server.';
+            } finally {
+                typingIndicator.classList.add('hidden');
+                generating = false;
+                sendButton.disabled = false;
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
         }
 
-        function appendMessage(sender, text) {
+        function appendMessage(sender, text, streaming = false) {
             const isUser = sender === 'user';
             const messageDiv = document.createElement('div');
             messageDiv.className = "flex items-start gap-4 max-w-3xl mx-auto";
+            let textElement;
 
             if (isUser) {
                 messageDiv.innerHTML = `
@@ -189,13 +275,20 @@
                         <i class="fa-solid fa-robot"></i>
                     </div>
                     <div class="flex-1 bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-sm text-slate-200 text-sm leading-relaxed">
-                        <p class="font-semibold text-indigo-400 mb-1">Architect AI Assistant</p>
-                        <p class="whitespace-pre-wrap">${escapeHtml(text)}</p>
+                        <p class="font-semibold text-indigo-400 mb-1">SecanAi Assistant</p>
+                        <p class="whitespace-pre-wrap"></p>
                     </div>
                 `;
+                textElement = messageDiv.querySelector('p:last-child');
+                if (streaming) {
+                    chatContainer.appendChild(messageDiv);
+                    return textElement;
+                }
+                textElement.textContent = escapeHtml(text);
             }
 
             chatContainer.appendChild(messageDiv);
+            return messageDiv;
         }
 
         function escapeHtml(text) {
@@ -208,6 +301,8 @@
             };
             return text.replace(/[&<>"']/g, m => map[m]);
         }
+
+        loadModelInfo();
     </script>
 </body>
 </html>
