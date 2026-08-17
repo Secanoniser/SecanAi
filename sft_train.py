@@ -31,6 +31,7 @@ from datasets import Dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
+    DataCollatorForSeq2Seq,
     Trainer,
     TrainingArguments,
 )
@@ -167,7 +168,14 @@ def main() -> None:
         fp16=torch.cuda.is_available(),
     )
 
-    trainer = Trainer(model=model, args=training_args, train_dataset=tokenized)
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=tokenized,
+        data_collator=DataCollatorForSeq2Seq(
+            tokenizer=tokenizer, padding=True, label_pad_token_id=-100
+        ),
+    )
 
     steps_per_epoch = max(len(tokenized) // args.batch_size, 1)
     estimate_minutes = round(steps_per_epoch * args.epochs * 2.3 / 60, 1)  # ~2.3s/step on CPU

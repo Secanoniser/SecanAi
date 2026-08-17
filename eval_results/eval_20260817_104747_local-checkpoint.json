@@ -1,0 +1,349 @@
+{
+  "source": "local-checkpoint",
+  "timestamp": "2026-08-17T10:47:47.701398+00:00",
+  "suite_size": 34,
+  "quick": false,
+  "parameter_count": 128994048,
+  "elapsed_seconds": 164.6,
+  "summary": {
+    "hits": 1,
+    "refused": 0,
+    "total": 34,
+    "hit_rate": 0.029,
+    "by_category": {
+      "ai": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      },
+      "general": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      },
+      "math": {
+        "hits": 1,
+        "refused": 0,
+        "total": 8
+      },
+      "python": {
+        "hits": 0,
+        "refused": 0,
+        "total": 8
+      },
+      "science": {
+        "hits": 0,
+        "refused": 0,
+        "total": 6
+      }
+    }
+  },
+  "results": [
+    {
+      "category": "python",
+      "prompt": "What is a Python list comprehension?",
+      "keyword": "list",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 346,
+      "response": "\"the word \"the \"in\" is a single-level language that is a \"the object of the \"the field\" (e.g., the most known-to-s) is the same-dimensional space. The first-order logic is a set of the same space, which is a given number of the real numbers.\nThe golden ratio is a system that is the equation of the probability \n  \n    \n      \n        n\n        ="
+    },
+    {
+      "category": "python",
+      "prompt": "Write a Python function that adds two numbers.",
+      "keyword": "def",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 416,
+      "response": "Some languages are used to be used to solve a single number of a set of a system. For example, the same case is a given number of the probability of the same space. The first-order logic is a set that is called the same-dimensional space.\nThe golden ratio is a linear equation that is a graph of a complex number of an equation.\nIn the Fourier transform, the real numbers is a finite-dimensional function, which is a"
+    },
+    {
+      "category": "python",
+      "prompt": "What is a Python dictionary and how do you use it?",
+      "keyword": "key",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 432,
+      "response": "\"the word\" is a single-level language that is a set of a system that can be used to be used for a single number of a given function. The most example of the same is called a set, the same number of the probability of the other.\nThe first-order logic is a linear equation that is the same-dimensional space. For example, the two-dimensional differential equation is a finite-dimensional function, which is a graph of the real numbers"
+    },
+    {
+      "category": "python",
+      "prompt": "How do you open and read a file in Python?",
+      "keyword": "open",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 384,
+      "response": "\"the first-to-based\" is a single-dimensional-level language. The most of the Sun is a large-time, which is a more common to be used to be a single number of the same space.\nThe following the same function is a system that is a set of the data. For example, the most common approach is the same-order logic, the same is called the same.\nSome languages are the same graph of the form of"
+    },
+    {
+      "category": "python",
+      "prompt": "What does the 'if __name__ == \"__main__\"' line do?",
+      "keyword": "main",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 283,
+      "response": "\"the first known-to-t\" is a single-dimensional-level language, which is a \"the \"the object\". The most common approach is a set of the \"the field\" (e.g., the \"a\" is the \"in\" of the DNA, the \"s\" or \"the word\" is called \"the\" or the \"b\"\", \"the algorithm is the first-dis\" (or the \"re-c)"
+    },
+    {
+      "category": "python",
+      "prompt": "Explain what a for loop does in Python.",
+      "keyword": "loop",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 375,
+      "response": "\"the word \"the \"in\" is a single-to-based language\". The most of the Sun's surface is a large-level language, which is a more likely to be used to be a single number of the same time. The first-scale approach is a particular way of the ocean, and the Sun is a given-dimensional-to helix.\nThe most common role in the Sun, the Sun has been used to the Sun. The most popular form"
+    },
+    {
+      "category": "python",
+      "prompt": "What is a function argument in Python?",
+      "keyword": "argument",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 367,
+      "response": "\"the word is a single-dimensional\" or \"the \"the field\" of the data\". The most example is a set of the same number of the system, which can be used to be used for the same space.\nThe first-order logic is a linear equation that is a graph of a set that is called a set. For example, the real numbers is a given function, the equation \n  \n    \n      \n        n\n        ("
+    },
+    {
+      "category": "python",
+      "prompt": "How do you install a package with pip?",
+      "keyword": "pip",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 337,
+      "response": "\"the word \"the \"in\" is a single-level language that is a \"the object of the \"the field\". The most example is a large-dimensional\" is the same \"the number of the other\" (e.g., the first-to-s) is the \"a-b\" of the Sun's surface.\nThe first-order logic is a set of the same space of the Solar System. The most common approach is a system that"
+    },
+    {
+      "category": "math",
+      "prompt": "Solve 2x + 3 = 7 for x.",
+      "keyword": "x",
+      "keyword_hit": true,
+      "refused": false,
+      "characters": 368,
+      "response": "A (in) is a single number of the same space of the Sun. The most example of the Earth's surface is the Sun, which is the same time. The Sun is the Solar System, but the Sun is a result of the ocean. The first-to-century force is the most common to the Sun's surface. The largest of the Solar century, the Sun has been used in the Sun and the Sun (e.1 °C) and the Earth"
+    },
+    {
+      "category": "math",
+      "prompt": "What is 12 times 8?",
+      "keyword": "96",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 433,
+      "response": "=== Other types of the Solar System ===\n\nThe first-order logic is a set of the same function of the system. The most common approach is the same-dimensional space, which is a given number of the probability of the Fourier transform.\nThe golden ratio is a linear equation for the same time, the real numbers of the complex numbers, and the same number of a set.\nSome algorithms are the same differential equation that are the equation"
+    },
+    {
+      "category": "math",
+      "prompt": "What is the square root of 144?",
+      "keyword": "12",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 399,
+      "response": "\"the word \"the \"in\" is a single-to-based language\". The most example is a set of the same space, which is a given function that is a number of the probability of the two-dimensional space.\nThe first-order logic is a linear equation that is called the same-order geometry.\nIn the 19th century, the study of the field of the Fourier transform is the same number of a set. For example, the golden ratio"
+    },
+    {
+      "category": "math",
+      "prompt": "If a triangle has angles 60 and 90 degrees, what is the third angle?",
+      "keyword": "30",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 395,
+      "response": "=== Other applications ===\n\nThe first-order logic is a set of the same function of the system. The most example of the two-dimensional space is called the same-order model. For example, the golden ratio is a given number of the probability of the complex numbers.\nThe Fourier transform of the golden Machine is the same number of a set, the equation \n  \n    \n      \n        n\n        (\n        x"
+    },
+    {
+      "category": "math",
+      "prompt": "What is 25 percent of 80?",
+      "keyword": "20",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 386,
+      "response": "\"the first-to-based\" is a single-dimensional-level language that is a given-order model. The most example of the Sun is a set of the same time, which is the same to be used to be the same.\nThe first-order logic is a system that is called a set-order number of the probability of the golden ratio.\nIn the 19th century, the first-dimensional space is a linear equation for the same space,"
+    },
+    {
+      "category": "math",
+      "prompt": "What is the area of a rectangle 4 by 6?",
+      "keyword": "24",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 376,
+      "response": "\"the first-to-based\" is a single-dimensional-level language. The most example of the Sun is a given-time, which is a large-order model that is a particular number of the same space.\nThe field of the Earth's surface is the Sun's surface, which can be used to be used in the Sun. The Sun is the Solar System, but the Sun has been used to the Sun, and the Sun will be the Sun and"
+    },
+    {
+      "category": "math",
+      "prompt": "Simplify the fraction 8/12.",
+      "keyword": "2/3",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 369,
+      "response": "=== Other types of the Solar System ===\n\nThe first-order logic is a set of the study of the same space. The most example of the Sun is the same-dimensional space of the Earth's surface. The first-level language is the Sun's surface, which is the first-to-based structure of the ocean.\nThe Sun's theorem is the Solar of the 20th century, the Sun, and the Sun. The Sun is"
+    },
+    {
+      "category": "math",
+      "prompt": "What comes next: 2, 4, 6, 8, ...?",
+      "keyword": "10",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 378,
+      "response": "\"the first-to-based\" is a single-dimensional-level language. The most of the Sun's surface is the Sun, which is the same-scale structure of the Earth's surface.\nThe Sun is a set of Earth's crust, but it is a large number of the Solar System. The Sun is the ocean, the Sun is an electric field of Earth. The largest time is the Earth, the same is the Solar belt. The same time is"
+    },
+    {
+      "category": "science",
+      "prompt": "What is the chemical symbol for water?",
+      "keyword": "H2O",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 367,
+      "response": "\"the word \"the first\" is a single number of the Sun's surface. The most common approach is the same to be the Sun. The first-to-based structure is the Sun, which is the Earth's surface, and the Sun is the ocean.\nThe Sun is a large-level language, the Sun has a more than the Sun and the Solar System. The Sun is an important role in the Sun (e.1) and the Earth is the"
+    },
+    {
+      "category": "science",
+      "prompt": "What planet is closest to the Sun?",
+      "keyword": "Mercury",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 390,
+      "response": "\"the word \"the first\" is a single number of the Sun's surface. The most common form of the Earth's surface, which is the same of the same time. The Sun is the Sun, the Sun is a result of the Solar System, but it is the ocean's surface of the ocean. The ocean is the surface of Earth's crust. The largest of Earth is the Earth, the ocean is a whole of the Moon. The Earth's atmosphere is the"
+    },
+    {
+      "category": "science",
+      "prompt": "What force pulls objects toward the Earth?",
+      "keyword": "gravity",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 378,
+      "response": "=== Other types ===\n\nThe first-order logic is a system of the same set of the Sun. The most common form of the Solar System is the same-dimensional space of the field of the Earth's surface. The first-level language is the Sun's theorem of the ocean, and the Sun is the Solar of the world's surface, which is the other number of the time.\nThe Sun's surface is the first-to-based"
+    },
+    {
+      "category": "science",
+      "prompt": "What gas do plants absorb from the air?",
+      "keyword": "carbon",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 402,
+      "response": "\"the word \"the first\" is a single-level language that is a \"the field of the data\". The most example is a set of the system that is the same to be used to be a single number of the same space.\nThe following the same function is a given number of a set, which is a graph of a system that can be used for a given function. For example, the two-dimensional space is a particular object, the same number of"
+    },
+    {
+      "category": "science",
+      "prompt": "What is the boiling point of water in Celsius?",
+      "keyword": "100",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 378,
+      "response": "\"the first-to-based\" is a single-level language that is a large-dimensional-time. The most common approach is a system that can be used to be used for the same time.\nThese of the Sun is a process of the Earth's surface, which is the same-order model of the same space of the Solar System. The first-scale approach is the Sun's surface. The Sun is the ocean, the Sun, and the Sun"
+    },
+    {
+      "category": "science",
+      "prompt": "What is photosynthesis?",
+      "keyword": "light",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 381,
+      "response": "\"the word \"the \"in\" is a single-level language that is a \"the object of the \"the field\". The most example is a set of the same space, which is the same to be used to be a given number of the other.\nThe first-order logic is a system that is called a set-dimensional function. For example, the probability of the Fourier transform is the equation of the complex numbers, the equation"
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a transformer in machine learning?",
+      "keyword": "attention",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 356,
+      "response": "\"the word is a single-dimensional\" or \"the \"the field\" of the data\". The most example is a set of the same function, which is a given number of the other language.\nThe first-order logic is a system that is a graph of a set that is called a set. For example, the equation \n  \n    \n      \n        n\n        (\n        x\n        )\n        =\n        1\n        ,"
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a neural network?",
+      "keyword": "neuron",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 395,
+      "response": "=== Other types of the most common ===\n\nThe word is a set of the data, which is a single number of the system. The first-order logic is a system that can be used to be used in the same space. For example, the same function is a given number of a set, the probability of the same number of its equation.\nThe field of the Fourier transform is the same-dimensional space, which has been used to the"
+    },
+    {
+      "category": "ai",
+      "prompt": "What is supervised learning?",
+      "keyword": "label",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 388,
+      "response": "=== Other types ===\n\nThe first-order logic is a system of the study of the data. The most common approach is a set of the same function, which is a given number of the system. For example, the same case is a single number of a set, the probability of the real numbers.\nThe golden ratio is a linear equation that is a graph of a function that is called a set.\nSome languages are used to be"
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a token in a language model?",
+      "keyword": "token",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 334,
+      "response": "\"the word is a single-dimensional\" or \"the \"the field\" of the \"the current\" (e.g., the most common object) and the \"in\" is the same \"the number of the Sun's surface\". The first is the Sun, the Sun is the ocean, and the Sun has been used to be the Sun.\nThe Sun's first-to-dist is the most likely to be a single number of Earth. The Sun"
+    },
+    {
+      "category": "ai",
+      "prompt": "What is a large language model?",
+      "keyword": "language",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 300,
+      "response": "\"the word is a single-to-based\" or \"the\" of the data is a \"the object\" or a \"in\" or the \"the \"the field\". The most example is a set of the same function, which is the \"a\" of a \"e\" or an \"the number of the \"b\" (e.g., the first-d) is the only to be used to be called a given function.\nThe following the"
+    },
+    {
+      "category": "ai",
+      "prompt": "What does fine-tuning a model mean?",
+      "keyword": "train",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 398,
+      "response": "\"the word \"the\" is a single-dimensional\" or \"the \"the field\" of the data\". The most example is a set of the system of the same space, which is the same to be used to be considered to be called the same.\nThe first-order logic is a branch of the study of the form of the structure of the database.\nIn the following the data, the function of the number of the probability of the Fourier transform, the"
+    },
+    {
+      "category": "general",
+      "prompt": "What is the capital of France?",
+      "keyword": "Paris",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 354,
+      "response": "\"the first-level\" is a single-dimensional\" or \"the \"the object\" (e.g., the most common language). The first-to-century English is the most used to be the same.\nThe word is a system that is a large-order model of the Sun's surface. The most example is a result of the ocean, which is the Sun, and the Sun is the same time.\nIn the Solar System, the Sun has"
+    },
+    {
+      "category": "general",
+      "prompt": "How many days are in a leap year?",
+      "keyword": "366",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 356,
+      "response": "\"the word is a single-to-based\" (e.g., a number of the Sun). The first-level language is a given-dimensional space, which is a set of the same time.\nThe most common approach is a system that is a graph of the data. For example, the two-order logic is a linear equation for the same space, the function of the probability \n  \n    \n      \n        x\n        ="
+    },
+    {
+      "category": "general",
+      "prompt": "What is the largest ocean on Earth?",
+      "keyword": "Pacific",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 377,
+      "response": "=== Other types of the Solar System ===\n\nThe Sun's surface is the most common to be a single number of the Sun. The Sun is the Sun's first-to-century energy, which is the same time of the Earth's surface. The ocean is the ocean, the Sun is a result of the ocean. The surface is an electric field of the surface, but it is the Earth. The Earth's crust is the surface of the same"
+    },
+    {
+      "category": "general",
+      "prompt": "What language is spoken in Japan?",
+      "keyword": "Japanese",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 386,
+      "response": "\"the first-to-based\" is a single-level language that is a large-dimensional-time. The most of the Sun is a given-scale model, which is a more common to be used to be a single number of the same time.\nThe first-order logic is a set of the Solar System, which can be used as a single space. For example, the most popular approach is the same-dimensional space, the same is called the same"
+    },
+    {
+      "category": "general",
+      "prompt": "What is the currency of the United States?",
+      "keyword": "dollar",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 411,
+      "response": "\"the first-to-based\" is a single-dimensional-level language. The most example is a set of the same space, which is a given number of the system of the Sun.\nThe following the same time is a system that is a large number of a set. This is the same-order logic that is the probability of the value of the Fourier transform.\nIn the golden ratio, the same function is a linear equation that is called the same number"
+    },
+    {
+      "category": "general",
+      "prompt": "Who wrote the play Romeo and Juliet?",
+      "keyword": "Shakespeare",
+      "keyword_hit": false,
+      "refused": false,
+      "characters": 394,
+      "response": "\"the first-to-based\" is the most common to be used to be a single-level language. The most of the Sun is a large-dimensional, which is a single number of the same time.\nThe first-order logic is a system that is a set of the Solar System. The first-dimensional space is a given number of a set that is called a given function.\nSome languages are the same-dimensional structure, which can be used"
+    }
+  ]
+}

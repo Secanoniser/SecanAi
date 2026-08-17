@@ -45,7 +45,7 @@ def _bar_chars() -> tuple[str, str]:
 
 
 TQDM_LINE = re.compile(
-    r"(\d+)/(\d+)\s+\[(\d+):(\d+)<((?:\d+:)?\d+:\d+),\s+([\d.]+)s/it\]"
+    r"(\d+)/(\d+)\s+\[((?:\d+:)?\d+:\d+)<((?:\d+:)?\d+:\d+),\s+([\d.]+)s/it\]"
 )
 LOSS_LINE = re.compile(r"'loss': '([\d.]+)'.*?'epoch': '([\d.]+)'")
 
@@ -125,12 +125,26 @@ def main() -> None:
         raw = read_log(args.log)
         lines = raw.split("\n")
 
-        # Newest tqdm line (carriage-return overwritten segments).
-        match = None
+        # Newest MAIN training bar. The log also contains secondary tqdm bars
+        # (e.g. "Writing model shards: 1/1") whose totals differ - only bars
+        # matching the main training total count for progress/finish logic.
+        candidates = []
         for segment in raw.split("\r"):
             candidate = TQDM_LINE.search(segment)
             if candidate:
-                match = candidate
+                candidates.append(candidate)
+        main_total = 0
+        for candidate in candidates:
+            if int(candidate.group(2)) > main_total:
+                main_total = int(candidate.group(2))
+        match = None
+        if main_total >= 100:  # main training bar (3190); ignore 1/1 shard bars
+            for candidate in reversed(candidates):
+                if int(candidate.group(2)) == main_total:
+                    match = candidate
+                    break
+        elif candidates:
+            match = candidates[-1]  # very early log: no main bar yet
 
         loss = None
         for line in lines:
@@ -142,9 +156,9 @@ def main() -> None:
 
         if match:
             step, total = int(match.group(1)), int(match.group(2))
-            elapsed = int(match.group(3)) * 60 + int(match.group(4))
-            eta_seconds = parse_eta(match.group(5))
-            speed = float(match.group(6))
+            elapsed = parse_eta(match.group(3))  # mm:ss or h:mm:ss
+            eta_seconds = parse_eta(match.group(4))
+            speed = float(match.group(5))
             fraction = step / total if total else 0.0
 
             loss_text = f"loss {loss[0]:.3f} (ep {loss[1]:.2f})" if loss else "loss (buffered)"
